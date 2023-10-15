@@ -11,7 +11,7 @@ $(document).ready(function() {
         //         <p>Amount: Rs <span>30000</span></p>
         //     </div>
         // </div>
-
+        var cartcount = document.getElementById('cart-count');
         var card = document.createElement('div');
         card.classList.add('checkout-card');
 
