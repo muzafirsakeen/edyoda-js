@@ -82,7 +82,9 @@ productList = window.localStorage.removeItem("product-list");
 
         // console.log(productList);
         // console.log(orderItemArr);
+        if(grandTotal>>0){
  $('#btn-place-order-a').attr("href","orderconfirm.html");
+        }
         var dataObj = {
             amount: grandTotal,
             products: orderItemArr
