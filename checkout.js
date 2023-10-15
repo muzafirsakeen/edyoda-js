@@ -65,8 +65,7 @@ $(document).ready(function() {
     $('#total-amount').html(grandTotal);
 
     $('#btn-place-order').click(function() {
-        $('#btn-place-order-a').attr("href","orderconfirm.html")
-
+productList = window.localStorage.removeItem("product-list");
         var orderItemArr = [];
         for(var i=0; i<productList.length; i++) {
             var prodObj = {
@@ -83,7 +82,7 @@ $(document).ready(function() {
 
         // console.log(productList);
         // console.log(orderItemArr);
-
+ $('#btn-place-order-a').attr("href","orderconfirm.html");
         var dataObj = {
             amount: grandTotal,
             products: orderItemArr
