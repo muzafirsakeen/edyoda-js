@@ -68,9 +68,9 @@ $(document).ready(function() {
     $('#btn-place-order').click(function() {
 productList = window.localStorage.removeItem("product-list");
         cartcount = window.localStorage.setItem("cart-count", "0");
-        if(totalamount>>0){
- $('#btn-place-order-a').attr("href","orderconfirm.html");
-        }
+       
+ 
+        
         var orderItemArr = [];
         for(var i=0; i<productList.length; i++) {
             var prodObj = {
@@ -81,7 +81,7 @@ productList = window.localStorage.removeItem("product-list");
                 "preview": productList[i].preview,
                 "isAccessory": productList[i].isAccessory
             }
-
+$('#btn-place-order-a').attr("href","orderconfirm.html");
             orderItemArr.push(prodObj);
         }
 
