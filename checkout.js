@@ -66,6 +66,10 @@ $(document).ready(function() {
 
     $('#btn-place-order').click(function() {
 productList = window.localStorage.removeItem("product-list");
+        cartcount = window.localStorage.setItem("cart-count", "0");
+        if(grandTotal>>0){
+ $('#btn-place-order-a').attr("href","orderconfirm.html");
+        }
         var orderItemArr = [];
         for(var i=0; i<productList.length; i++) {
             var prodObj = {
@@ -82,9 +86,7 @@ productList = window.localStorage.removeItem("product-list");
 
         // console.log(productList);
         // console.log(orderItemArr);
-        if(grandTotal>>0){
- $('#btn-place-order-a').attr("href","orderconfirm.html");
-        }
+        
         var dataObj = {
             amount: grandTotal,
             products: orderItemArr
