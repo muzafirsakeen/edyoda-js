@@ -65,7 +65,7 @@ $(document).ready(function() {
     $('#total-amount').html(grandTotal);
 
     $('#btn-place-order').click(function() {
-        $('#btn-place-order-a').attr("href","orderconfirm.html");
+        
 productList = window.localStorage.removeItem("product-list");
         cartcount = window.localStorage.setItem("cart-count", "0");
        
