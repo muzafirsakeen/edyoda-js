@@ -11,6 +11,7 @@ $(document).ready(function() {
         //         <p>Amount: Rs <span>30000</span></p>
         //     </div>
         // </div>
+        var totalamount = documen.getElementById('total-amount');
         var cartcount = document.getElementById('cart-count');
         var card = document.createElement('div');
         card.classList.add('checkout-card');
@@ -67,7 +68,7 @@ $(document).ready(function() {
     $('#btn-place-order').click(function() {
 productList = window.localStorage.removeItem("product-list");
         cartcount = window.localStorage.setItem("cart-count", "0");
-        if(grandTotal>>0){
+        if(totalamount>>0){
  $('#btn-place-order-a').attr("href","orderconfirm.html");
         }
         var orderItemArr = [];
